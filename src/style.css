@@ -1,0 +1,197 @@
+header {
+  background-color: #fff;
+  padding: 12px 0;
+  padding-left: 15px;
+  margin-bottom: 25px;
+}
+
+header h1 {
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+}
+
+header h1 a,
+header h1 a:hover {
+  color: inherit;
+}
+
+header .btn-group {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+header .btn-green,
+.posts-list .btn-green,
+.article-card .btn-green {
+  border-color: #52c41a;
+  color: #52c41a;
+}
+
+.posts-list,
+.article-card,
+.account-card {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.posts-list .ant-card,
+.article-card,
+.account-card,
+.ant-pagination {
+  margin-bottom: 15px;
+}
+
+.posts-list .ant-card,
+.article-card,
+.account-card {
+  box-shadow: 2px 2px 10px #ccc;
+}
+
+.posts-list .ant-card-body,
+.article-card .ant-card-body {
+  padding: 15px;
+}
+
+.posts-list .title,
+.article-card .title {
+  float: left;
+  max-width: 75%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.posts-list .title h2,
+.article-card .title h2 {
+  display: inline;
+  margin: 0;
+  color: #1890ff;
+  font-size: 20px;
+}
+
+.posts-list .title .btn-fav,
+.article-card .title .btn-fav {
+  border: none;
+  background: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.posts-list .title .btn-fav:disabled,
+.article-card .title .btn-fav:disabled {
+  color: #999;
+  cursor: default;
+}
+
+.btn-fav:disabled svg path:nth-child(1) {
+  fill: #999;
+}
+
+.btn-fav svg path:nth-child(2),
+.btn-fav:disabled:hover svg path:nth-child(2) {
+  fill: none;
+}
+
+.btn-fav:hover svg path:nth-child(2) {
+  fill: #999;
+}
+
+.btn-fav.active svg path {
+  fill: #922;
+}
+
+.posts-list .title .btn-fav .anticon,
+.article-card .title .btn-fav .anticon {
+  margin-right: 4px;
+}
+
+.posts-list .details,
+.article-card .details {
+  float: right;
+  max-width: 25%;
+}
+
+.posts-list .details .author,
+.posts-list .details .date,
+.article-card .details .author,
+.article-card .details .date {
+  text-align: right;
+}
+
+.posts-list .details .author,
+.article-card .details .author {
+  font-size: 18px;
+}
+
+.posts-list .details .date,
+.article-card .details .date {
+  color: #999;
+  font-size: 12px;
+}
+
+.posts-list .ant-tag,
+.article-card .ant-tag {
+  margin-bottom: 5px;
+}
+
+.posts-list .tags,
+.article-card .tags {
+  clear: left;
+}
+
+.posts-list .description,
+.article-card .description {
+  margin: 0;
+  overflow: hidden;
+  clear: both;
+}
+
+.posts-list .description-container,
+.article-card .description-container {
+  clear: both;
+  min-height: 45px;
+}
+
+.article-card .description {
+  color: #999;
+}
+
+.article-card h2.article-header {
+  font-size: 1.8em;
+}
+
+.account-card {
+  width: 390px;
+}
+
+.account-card h2 {
+  margin: 0;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.account-card .ant-form .ant-form-item-label label,
+.article-card .ant-form .ant-form-item-label label {
+  display: block;
+}
+
+.account-card .ant-checkbox {
+  align-self: flex-start;
+  margin-top: 5px;
+}
+
+.article-card .editor-header {
+  font-size: 19px;
+  text-align: center;
+}
+
+.article-card .ant-form-item-control-input-content textarea.ant-input {
+  min-height: 168px;
+}
+
+.ant-modal-confirm-error .details {
+  background-color: #ddd;
+  padding: 5px;
+}
