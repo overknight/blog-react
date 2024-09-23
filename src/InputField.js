@@ -104,23 +104,34 @@ const InputField = ({
   onBlur,
   onChange,
 }) => {
-  const { trigger } = useFormContext();
+  const { trigger, setValue } = useFormContext();
   const {
     field,
     fieldState: { isDirty },
     formState: { errors },
   } = useController({ name, rules, defaultValue });
+  const formInstance = Form.useFormInstance();
   const inputProps = { ...field, maxLength };
   if (isPasswordField) {
     placeholder = label == 'New password' ? label : 'Password';
     inputProps.type = 'password';
   }
   if (!onBlur)
-    onBlur = () => {
+    onBlur = (e) => {
+      if (!isPasswordField) {
+        const value = e.target.value.trimEnd();
+        setValue(name, value);
+        formInstance.setFieldValue(name, value);
+      }
       if (isDirty) trigger(name);
     };
   if (!onChange)
-    onChange = () => {
+    onChange = (e) => {
+      if (!isPasswordField) {
+        const value = e.target.value.trimStart();
+        setValue(name, value);
+        formInstance.setFieldValue(name, value);
+      }
       const error = errors[name];
       if (error) {
         trigger(name);

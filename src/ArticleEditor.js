@@ -20,10 +20,15 @@ const TagInput = ({ name, remove, isLast }) => {
   const formInstance = Form.useFormInstance();
   const onBlur = (e) => {
     field.onBlur(e);
+    const value = e.target.value.trimEnd();
+    setValue(`tagList.${name}`, value);
+    formInstance.setFieldValue(['tagList', name], value);
     trigger(`tagList.${name}`);
   };
   const onChange = (e) => {
+    e.target.value = e.target.value.trimStart();
     field.onChange(e);
+    formInstance.setFieldValue(['tagList', name], e.target.value);
     if (error) {
       trigger(`tagList.${name}`);
     }
